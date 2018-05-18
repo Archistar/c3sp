@@ -1,0 +1,50 @@
+[
+    {
+        "servers": [
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - Germany"
+            },
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - United States"
+            },
+            {
+                "name": "IDrive"
+            },
+            {
+                "name": "Box"
+            }
+        ]
+    },
+    {
+        "servers": [
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - Germany"
+            },
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - United States"
+            },
+            {
+                "name": "IDrive"
+            },
+            {
+                "name": "Dropbox"
+            }
+        ]
+    },
+    {
+        "servers": [
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - Germany"
+            },
+            {
+                "name": "1und1 Cloud Server (max 500 GB) - United States"
+            },
+            {
+                "name": "Box"
+            },
+            {
+                "name": "Dropbox"
+            }
+        ]
+    }
+]

@@ -1,0 +1,8 @@
+{
+  "k": 3,
+  "n": 4,
+  "loc": "EU",
+  "cost": {
+    "costPerGBStorage": 0.03
+  }
+}
