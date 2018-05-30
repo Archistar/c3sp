@@ -45,14 +45,14 @@ maybeDo a Nothing  = a
 maybeDo a (Just f) = f a
 
 -- Calculates probability that at lest n of the given probabilities are true at the same time.
-atLeast :: Integer -> [Scientific] -> Scientific
+atLeast :: (Eq a, Ord a, Num a, Num b) => a -> [b] -> b
 atLeast x = sum . map product . atLeastTree x
 
-atLeastTree :: Integer -> [Scientific] -> [[Scientific]]
+atLeastTree :: (Eq a, Ord a, Num a, Num b) => a -> [b] -> [[b]]
 atLeastTree 0 _ = [[1]]
 atLeastTree c lst
   | c < 0 = error "Minimum amount of required true predicates can't be negative."
-  | lst == [] = []
+  | null lst = []
   | fromIntegral (length lst) < c = []
   | fromIntegral (length lst) == c = [lst]
   | otherwise = map (x:) (atLeastTree (c-1) xs) ++ map ((1-x):) (atLeastTree c xs)
