@@ -1,4 +1,4 @@
-module Geolocation(Lattice((<:), top, bot), Geolocation(..), geolocations, readGeolocation) where
+module Geolocation(Lattice((<:)), top, bot, Geolocation(..), geolocations, readGeolocation) where
 
 import Data.Aeson (FromJSON, ToJSON)
 import qualified Data.Aeson as Aeson
@@ -10,15 +10,17 @@ class Eq a => Lattice a where
     top :: a
     (<:) :: a -> a -> Bool
 
-data Geolocation = Toronto | Seoul | Frankfurt | London | CA | KR | GB | BE | BR | DE | EU | HK | IE | JP | NL | Virginia | US | Asia | World | Local deriving (Eq, Show)
+data Geolocation = Melbourne | Toronto | Seoul | Frankfurt | London | AU | CA | KR | GB | BE | BR | DE | EU | HK | IE | JP | NL | Virginia | US | Asia | World | Local deriving (Eq, Show)
 
-geolocations = [Toronto, Seoul, Frankfurt, London, CA, KR, GB, BE, BR, DE, EU, HK, IE, JP, NL, Virginia, US, Asia, World, Local]
+geolocations = [Melbourne, Toronto, Seoul, Frankfurt, London, AU, CA, KR, GB, BE, BR, DE, EU, HK, IE, JP, NL, Virginia, US, Asia, World, Local]
 
 readGeolocation :: String -> Either String Geolocation
+readGeolocation "Melbourne" = Right Melbourne
 readGeolocation "Toronto" = Right Toronto
 readGeolocation "Seoul" = Right Seoul
 readGeolocation "Frankfurt" = Right Frankfurt
 readGeolocation "London" = Right London
+readGeolocation "AU" = Right AU
 readGeolocation "CA" = Right CA
 readGeolocation "KR" = Right KR
 readGeolocation "GB" = Right GB
@@ -62,6 +64,10 @@ instance Lattice Geolocation where
     GB <: GB = True
     London <: GB = True
     _ <: GB = False
+
+    AU <: AU = True
+    Melbourne <: AU = True
+    _ <: AU = False
 
     EU <: EU = True
     DE <: EU = True
@@ -115,6 +121,9 @@ instance Lattice Geolocation where
 
     Toronto <: Toronto = True
     _       <: Toronto = False
+
+    Melbourne <: Melbourne = True
+    _         <: Melbourne = False
 
 instance FromJSON Geolocation where
     parseJSON (Aeson.String n) = either fail pure $ readGeolocation $ unpack n
