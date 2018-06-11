@@ -148,7 +148,7 @@
 	},
 	{
 		"id": 7,
-		"name": "Google - Multiregion EU",
+		"name": "Google - Nearline Multiregion EU",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -169,7 +169,7 @@
 	},
 	{
 		"id": 8,
-		"name": "Google - Multiregion US",
+		"name": "Google - Nearline Multiregion US",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -190,7 +190,7 @@
 	},
 	{
 		"id": 9,
-		"name": "Google - Multiregion Asia",
+		"name": "Google - Nearline Multiregion Asia",
 		"serverLocation": "Asia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -211,7 +211,7 @@
 	},
 	{
 		"id": 10,
-		"name": "Google - Regional Frankfurt",
+		"name": "Google - Nearline Regional Frankfurt",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -232,7 +232,7 @@
 	},
 	{
 		"id": 11,
-		"name": "Google - Regional London",
+		"name": "Google - Nearline Regional London",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -253,7 +253,7 @@
 	},
 	{
 		"id": 12,
-		"name": "Google - Regional Belgium",
+		"name": "Google - Nearline Regional Belgium",
 		"serverLocation": "BE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -274,7 +274,7 @@
 	},
 	{
 		"id": 13,
-		"name": "Google - Regional Netherlands",
+		"name": "Google - Nearline Regional Netherlands",
 		"serverLocation": "NL",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -295,7 +295,7 @@
 	},
 	{
 		"id": 14,
-		"name": "Google - Multiregion EU",
+		"name": "Google - Coldline Multiregion EU",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -316,7 +316,7 @@
 	},
 	{
 		"id": 15,
-		"name": "Google - Multiregion US",
+		"name": "Google - Coldline Multiregion US",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -337,7 +337,7 @@
 	},
 	{
 		"id": 16,
-		"name": "Google - Multiregion Asia",
+		"name": "Google - Coldline Multiregion Asia",
 		"serverLocation": "Asia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -358,7 +358,7 @@
 	},
 	{
 		"id": 17,
-		"name": "Google - Multiregion Frankfurt",
+		"name": "Google - Coldline Multiregion Frankfurt",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -379,7 +379,7 @@
 	},
 	{
 		"id": 18,
-		"name": "Google - Multiregion London",
+		"name": "Google - Coldline Multiregion London",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -400,7 +400,7 @@
 	},
 	{
 		"id": 19,
-		"name": "Google - Multiregion Belgium",
+		"name": "Google - Coldline Multiregion Belgium",
 		"serverLocation": "BE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -421,7 +421,7 @@
 	},
 	{
 		"id": 20,
-		"name": "Google - Multiregion Netherlands",
+		"name": "Google - Coldline Multiregion Netherlands",
 		"serverLocation": "NL",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -547,7 +547,7 @@
 	},
 	{
 		"id": 26,
-		"name": "Amazon - N. Virginia",
+		"name": "Amazon - IA N. Virginia",
 		"serverLocation": "Virginia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -568,7 +568,7 @@
 	},
 	{
 		"id": 27,
-		"name": "Amazon - Frankfurt",
+		"name": "Amazon - IA Frankfurt",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -589,7 +589,7 @@
 	},
 	{
 		"id": 28,
-		"name": "Amazon - Ireland",
+		"name": "Amazon - IA Ireland",
 		"serverLocation": "IE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -610,7 +610,7 @@
 	},
 	{
 		"id": 29,
-		"name": "Amazon - London",
+		"name": "Amazon - IA London",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -631,7 +631,7 @@
 	},
 	{
 		"id": 30,
-		"name": "Amazon - Seoul",
+		"name": "Amazon - IA Seoul",
 		"serverLocation": "Seoul",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -652,7 +652,7 @@
 	},
 	{
 		"id": 31,
-		"name": "Amazon - N. Virginia",
+		"name": "Amazon - Glacier N. Virginia",
 		"serverLocation": "Virginia",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -673,7 +673,7 @@
 	},
 	{
 		"id": 32,
-		"name": "Amazon - Frankfurt",
+		"name": "Amazon - Glacier Frankfurt",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -694,7 +694,7 @@
 	},
 	{
 		"id": 33,
-		"name": "Amazon - Ireland",
+		"name": "Amazon - Glacier Ireland",
 		"serverLocation": "IE",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -715,7 +715,7 @@
 	},
 	{
 		"id": 34,
-		"name": "Amazon - London",
+		"name": "Amazon - Glacier London",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -736,7 +736,7 @@
 	},
 	{
 		"id": 35,
-		"name": "Amazon - Seoul",
+		"name": "Amazon - Glacier Seoul",
 		"serverLocation": "Seoul",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -778,7 +778,7 @@
 	},
 	{
 		"id": 37,
-		"name": "Microsoft Azure - East US 2",
+		"name": "Microsoft Azure - Cool East US 2",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -799,7 +799,7 @@
 	},
 	{
 		"id": 38,
-		"name": "Microsoft Azure - East US 2",
+		"name": "Microsoft Azure - Archive East US 2",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -841,7 +841,7 @@
 	},
 	{
 		"id": 40,
-		"name": "Microsoft Azure - West Europe",
+		"name": "Microsoft Azure - Cool West Europe",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -862,7 +862,7 @@
 	},
 	{
 		"id": 41,
-		"name": "Microsoft Azure - West Europe",
+		"name": "Microsoft Azure - Archive West Europe",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -904,7 +904,7 @@
 	},
 	{
 		"id": 43,
-		"name": "Microsoft Azure - North Europe",
+		"name": "Microsoft Azure - Cool North Europe",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -925,7 +925,7 @@
 	},
 	{
 		"id": 44,
-		"name": "Microsoft Azure - North Europe",
+		"name": "Microsoft Azure - Archive North Europe",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -967,7 +967,7 @@
 	},
 	{
 		"id": 46,
-		"name": "Microsoft Azure - Germany Central",
+		"name": "Microsoft Azure - Cool Germany Central",
 		"serverLocation": "DE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -1006,5 +1006,299 @@
 		"delayedFirstByte": false,
 		"minStorageDuration": 0,
 		"note": "Storage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 48,
+		"name": "IBM Cloud - Regional US East",
+		"serverLocation": "US",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.022,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.09,
+			"costPerGetOperation": 0.000005,
+			"costPerInsertOperation": 0.000006,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000006,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 0,
+		"note": "Storage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 49,
+		"name": "IBM Cloud - Regional Melbourne",
+		"serverLocation": "Melbourne",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0238,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.14,
+			"costPerGetOperation": 0.000005,
+			"costPerInsertOperation": 0.000006,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000006,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 0,
+		"note": "Storage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 50,
+		"name": "IBM Cloud - Regional Frankfurt",
+		"serverLocation": "Frankfurt",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0242,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.09,
+			"costPerGetOperation": 0.000005,
+			"costPerInsertOperation": 0.000006,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000006,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 0,
+		"note": "Storage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 51,
+		"name": "IBM Cloud - Regional Great Britain",
+		"serverLocation": "GB",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0235,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.09,
+			"costPerGetOperation": 0.000005,
+			"costPerInsertOperation": 0.000006,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000006,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 0,
+		"note": "Storage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 52,
+		"name": "IBM Cloud - Regional Vault Toronto",
+		"serverLocation": "Toronto",
+		"encryptedStorage": "AES-256",
+		"availability": 0.995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0124,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.1,
+			"costPerGetOperation": 0.0000125,
+			"costPerInsertOperation": 0.0000125,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.0000125,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 30,
+		"note": "Tier: Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 53,
+		"name": "IBM Cloud - Regional Vault US East",
+		"serverLocation": "US",
+		"encryptedStorage": "AES-256",
+		"availability": 0.995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.012,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.1,
+			"costPerGetOperation": 0.0000125,
+			"costPerInsertOperation": 0.0000125,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.0000125,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 30,
+		"note": "Tier: Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 54,
+		"name": "IBM Cloud - Regional Vault Melbourne",
+		"serverLocation": "Melbourne",
+		"encryptedStorage": "AES-256",
+		"availability": 0.995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0144,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.15,
+			"costPerGetOperation": 0.0000125,
+			"costPerInsertOperation": 0.0000125,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.0000125,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 30,
+		"note": "Tier: Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 55,
+		"name": "IBM Cloud - Regional Vault Frankfurt",
+		"serverLocation": "Frankfurt",
+		"encryptedStorage": "AES-256",
+		"availability": 0.995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0132,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.1,
+			"costPerGetOperation": 0.0000125,
+			"costPerInsertOperation": 0.0000125,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.0000125,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 30,
+		"note": "Tier: Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 56,
+		"name": "IBM Cloud - Regional Vault Great Britain",
+		"serverLocation": "GB",
+		"encryptedStorage": "AES-256",
+		"availability": 0.995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0128,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.1,
+			"costPerGetOperation": 0.0000125,
+			"costPerInsertOperation": 0.0000125,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.0000125,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 30,
+		"note": "Tier: Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 57,
+		"name": "IBM Cloud - Regional Cold Vault Toronto",
+		"serverLocation": "Toronto",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0062,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.14,
+			"costPerGetOperation": 0.000025,
+			"costPerInsertOperation": 0.000025,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000025,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 90,
+		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 58,
+		"name": "IBM Cloud - Regional Cold Vault US East",
+		"serverLocation": "US",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.006,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.14,
+			"costPerGetOperation": 0.000025,
+			"costPerInsertOperation": 0.000025,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000025,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 90,
+		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 59,
+		"name": "IBM Cloud - Regional Cold Vault Melbourne",
+		"serverLocation": "Melbourne",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0072,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.19,
+			"costPerGetOperation": 0.000025,
+			"costPerInsertOperation": 0.000025,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000025,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 90,
+		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 60,
+		"name": "IBM Cloud - Regional Cold Vault Frankfurt",
+		"serverLocation": "Frankfurt",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0066,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.14,
+			"costPerGetOperation": 0.000025,
+			"costPerInsertOperation": 0.000025,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000025,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 90,
+		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 61,
+		"name": "IBM Cloud - Regional Cold Vault Great Britain",
+		"serverLocation": "GB",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0064,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0.14,
+			"costPerGetOperation": 0.000025,
+			"costPerInsertOperation": 0.000025,
+			"costPerDeleteOperation": 0,
+			"costPerListOperation": 0.000025,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 90,
+		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
 	}
 ]
