@@ -70,7 +70,7 @@ buildConfigs servers (Query k n mloc minAvail maxCost delay minDur _ opt) = sort
         pickServers _ _ _ [] = []
         pickServers servCnt cost unsafeLocationCnt (x:xs)
           | maybe False (servCnt >=) n = []
-          | otherwise = bool [] (bool [((hasSafeLoc, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers servCnt cost unsafeLocationCnt xs ++ maybe (bool [] [((hasSafeLoc, finalLCnt), [x])] (nextPicks /= [] && isSuited)) (const []) n
+          | otherwise = bool [] (bool [((hasSafeLoc, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers servCnt cost unsafeLocationCnt xs ++ maybe (bool [] [((hasSafeLoc, finalLCnt), [x])] (isSuited && nextPicks /= [])) (const []) n
                 where
                     isSafe = isSafeLocation (fromMaybe top mloc) $ servServerLocation x
                     newUnsafeLocationCnt = unsafeLocationCnt + bool 1 0 isSafe
