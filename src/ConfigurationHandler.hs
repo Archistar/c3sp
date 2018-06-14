@@ -53,7 +53,6 @@ validateQuery q servers
                 fmap (\id -> "MultOption error: Server with id " ++ show id ++ " does not exist.") $ listToMaybe nonExisting
         Left errMsg -> Just errMsg
 
--- ignore sorting as this will be done by the sorting server
 buildConfigs :: [Server] -> Query -> [ServerConf]
 buildConfigs servers (Query k n mloc minAvail maxCost delay minDur _ opt) = sortedConfigs
     where
@@ -71,7 +70,7 @@ buildConfigs servers (Query k n mloc minAvail maxCost delay minDur _ opt) = sort
         pickServers _ _ _ [] = []
         pickServers servCnt cost unsafeLocationCnt (x:xs)
           | maybe False (servCnt >=) n = []
-          | otherwise = bool [] (bool [((isSafe, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers servCnt cost unsafeLocationCnt xs
+          | otherwise = bool [] (bool [((hasSafeLoc, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers servCnt cost unsafeLocationCnt xs ++ maybe (bool [] [((hasSafeLoc, finalLCnt), [x])] (nextPicks /= [] && isSuited)) (const []) n
                 where
                     isSafe = isSafeLocation (fromMaybe top mloc) $ servServerLocation x
                     newUnsafeLocationCnt = unsafeLocationCnt + bool 1 0 isSafe
@@ -79,6 +78,7 @@ buildConfigs servers (Query k n mloc minAvail maxCost delay minDur _ opt) = sort
                     newServCnt = servCnt + 1
                     isSuited = maybe True (newUnsafeLocationCnt <) k && maybe True (not . flip exceedsLimit newCost) maxCost && (fromMaybe True delay || (not $ servDelayedFirstByte x)) && maybe True (servMinStorageDuration x <=) minDur
                     finalLCnt = fromMaybe (newUnsafeLocationCnt + 1) k
+                    hasSafeLoc = newServCnt > newUnsafeLocationCnt
                     nextPicks :: [((Bool, Int), [Server])]
                     nextPicks = bool nextPicks' (map (first (first (const True))) nextPicks') isSafe
                     nextPicks' = pickServers newServCnt newCost newUnsafeLocationCnt xs

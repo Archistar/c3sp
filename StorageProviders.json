@@ -1300,5 +1300,26 @@
 		"delayedFirstByte": false,
 		"minStorageDuration": 90,
 		"note": "Tier: Cold Vault\nStorage a little cheaper after first 500TB\nOut bandwidth  a little cheaper after first 50TB"
+	},
+	{
+		"id": 62,
+		"name": "Oracle Cloud - Object Storage",
+		"serverLocation": "World",
+		"encryptedStorage": "AES-256",
+		"availability": 0.9995,
+		"accessLocation": "EU",
+		"cost": {
+			"costPerGBStorage": 0.0255,
+			"costPerGBInboundTraffic": 0,
+			"costPerGBOutboundTraffic": 0,
+			"costPerGetOperation": 0.00000034,
+			"costPerInsertOperation": 0.00000034,
+			"costPerDeleteOperation": 0.00000034,
+			"costPerListOperation": 0.00000034,
+			"costPerUser": 0
+		},
+		"delayedFirstByte": false,
+		"minStorageDuration": 0,
+		"note": "$0.0085 per Outbound Traffic after first 10TB per Month"
 	}
 ]
