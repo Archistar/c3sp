@@ -31,7 +31,7 @@ generateServerConfig k g servers@(_:_) = ServerConf k n g (atLeast k avails) cos
     where
         n = length servers
         avails = map servAvailability servers
-        cost = scaleCost (1/ (fromIntegral k)) $ sumCost $ map servCost servers -- scale only really makes sense for storage cost
+        cost = sumCost $ map servCost servers--scaleCost (1/ (fromIntegral k)) $ sumCost $ map servCost servers -- scale only really makes sense for storage cost
         delay = or $ map servDelayedFirstByte servers
         duration = maximum $ map servMinStorageDuration servers
 generateServerConfig _ _ _ = error "At least 1 server is required to generate a server configuration."
