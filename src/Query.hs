@@ -35,7 +35,7 @@ data Query = Query
     , qCost    :: Maybe CostP
     , qDelay   :: Maybe Bool
     , qMinDur  :: Maybe Int
-    , qOrder   :: Maybe [Order]
+    , qOrder   :: Maybe Order
     , qOptions :: Maybe QueryOptions
     } deriving (Show, Eq)
 

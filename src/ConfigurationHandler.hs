@@ -17,10 +17,16 @@ import Util
 limit = 10
 
 -- how should results be sorted
-sortFn c1 c2 =
+sortFn1 c1 c2 =
     let sc = costPerGBStorage . scCostPerMonth
     in case compare (sc c1) (sc c2) of
          EQ -> flip compare (scAvailability c1) (scAvailability c2)
+         x  -> x
+
+sortFn2 c1 c2 =
+    let sc = costPerGBStorage . scCostPerMonth
+    in case flip compare (scAvailability c1) (scAvailability c2) of
+         EQ -> compare (sc c1) (sc c2)
          x  -> x
 
 ioServers :: IO [Server]
@@ -54,8 +60,9 @@ validateQuery q servers
         Left errMsg -> Just errMsg
 
 buildConfigs :: [Server] -> Query -> [ServerConf]
-buildConfigs servers (Query k n mloc minAvail maxCost delay minDur _ opt) = sortedConfigs
+buildConfigs servers (Query k n mloc minAvail maxCost delay minDur order opt) = sortedConfigs
     where
+        sortFn = if order == Just ByAvail then sortFn2 else sortFn1
         servers' = maybeDo servers $ do
             mopts <- opt >>= optMultOption
             let singleMult s mopt = let
