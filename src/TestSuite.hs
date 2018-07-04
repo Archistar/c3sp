@@ -41,18 +41,31 @@ throwsException x = catch (x `deepseq` return False) (const $ return True :: Som
 configurationHandlerTest :: ModuleTest
 configurationHandlerTest =
     ModuleTest "ConfigurationHandler" [
-        Test "Test1" $ tf "bsp1.1" "erg1.1",
-        Test "Test2" $ tf "bsp1.2" "erg1.2",
-        Test "Test3" $ tf "bsp1.3" "erg1.3",
-        Test "Test4" $ tf "bsp1.4" "erg1.4",
-        Test "Test5" $ tf "bsp1.5" "erg1.5",
-        Test "Test6" $ tf "bsp1.6" "erg1.6",
-        Test "Test7" $ tf "bsp1.7" "erg1.7",
-        Test "Test8" $ tf "bsp1.8" "erg1.8",
-        Test "Test9" $ tf "eval1.json" "erg1.json",
-        Test "Test10" $ tf "eval2.json" "erg2.json"
+        Test "Test1" $ tf "1_2",
+        Test "Test2" $ tf "2_4",
+        Test "Test3" $ tf "3_5",
+        Test "Test4" $ tf "4_6",
+        Test "Test5" $ tf "5_8",
+        Test "Test6" $ tf "6_9",
+        Test "Test7" $ tf "7_10",
+        Test "Test8" $ tf "moptAvail_1_3",
+        Test "Test9" $ tf "moptAvail_2_4",
+        Test "Test10" $ tf "moptAvail_3_5",
+        Test "Test11" $ tf "moptAvail_4_7",
+        Test "Test12" $ tf "moptAvail_5_8",
+        Test "Test13" $ tf "optAvail_1_3",
+        Test "Test14" $ tf "optAvail_2_4",
+        Test "Test15" $ tf "optAvail_3_5",
+        Test "Test16" $ tf "optAvail_4_6",
+        Test "Test17" $ tf "optAvail_5_8",
+        Test "Test18" $ tf "optAvail_6_9",
+        Test "Test19" $ tf "p5optAvail_1_3",
+        Test "Test20" $ tf "p5optAvail_2_4",
+        Test "Test21" $ tf "p5optAvail_3_5",
+        Test "Test22" $ tf "p5optAvail_4_7",
+        Test "Test23" $ tf "p5optAvail_5_8"
     ]
-        where tf i o = findConfigs (baseTestDir ++ i) >>= either error (flip testAgainstFile o . encode)
+        where tf i = findConfigs (baseTestDir ++ i ++ "_q.json") >>= either error (flip testAgainstFile (i ++ ".json") . encode)
 
 utilTest :: ModuleTest
 utilTest =
