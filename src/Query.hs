@@ -28,15 +28,16 @@ data QueryOptions = QueryOptions
     } deriving (Show, Eq)
 
 data Query = Query
-    { qK       :: Maybe Int
-    , qN       :: Maybe Int
-    , qLoc     :: Maybe Geolocation
-    , qAvail   :: Maybe Scientific
-    , qCost    :: Maybe CostP
-    , qDelay   :: Maybe Bool
-    , qMinDur  :: Maybe Int
-    , qOrder   :: Maybe Order
-    , qOptions :: Maybe QueryOptions
+    { qK             :: Maybe Int
+    , qN             :: Maybe Int
+    , qLoc           :: Maybe Geolocation
+    , qAvail         :: Maybe Scientific
+    , qCost          :: Maybe CostP
+    , qDelay         :: Maybe Bool
+    , qMinDur        :: Maybe Int
+    , qOrder         :: Maybe Order
+    , qOptions       :: Maybe QueryOptions
+    , qMaxPerCompany :: Maybe Int
     } deriving (Show, Eq)
 
 deriveJSON defaultOptions ''Order

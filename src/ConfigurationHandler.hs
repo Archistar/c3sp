@@ -3,6 +3,7 @@ module ConfigurationHandler(stdinValidateQuery, findConfigs, stdinFindConfigs) w
 import Data.List (sort, sortBy, intersect, find)
 import Data.Maybe (listToMaybe, fromMaybe, isJust, isNothing, fromJust)
 import Data.Bool (bool)
+import qualified Data.Map.Strict as M
 import Control.Applicative ((<$>))
 import qualified Data.ByteString.Lazy.Char8 as Ch8
 import Data.Aeson (ToJSON, eitherDecode, encode)
@@ -48,7 +49,7 @@ isSafeLocation = flip (<:)
 validateQuery :: Ch8.ByteString -> [Server] -> Maybe String
 validateQuery q servers
     = case eitherDecode q of
-        Right (Query k n mloc minAvail maxCost delay minDur order opt)
+        Right (Query k n mloc minAvail maxCost delay minDur order opt compMax)
             | fromMaybe False $ fmap (<= 0) k -> Just "k <= 0"
             | fromMaybe False (n >>= (flip fmap k . (<))) -> Just "n < k"
             | fromMaybe False $ fmap  (\x -> x < 0 || x > 1) minAvail -> Just "avail < 0 or > 1"
@@ -60,7 +61,7 @@ validateQuery q servers
         Left errMsg -> Just errMsg
 
 buildConfigs :: [Server] -> Query -> [ServerConf]
-buildConfigs servers (Query k n mloc minAvail maxCost delay minDur order opt) = sortedConfigs
+buildConfigs servers (Query k n mloc minAvail maxCost delay minDur order opt compMax) = sortedConfigs
     where
         sortFn = if order == Just ByAvail then sortFn2 else sortFn1
         servers' = maybeDo servers $ do
@@ -73,29 +74,32 @@ buildConfigs servers (Query k n mloc minAvail maxCost delay minDur order opt) = 
                         $ find' ((id ==) . servId) s
                     in replicate m mserver ++ s'
             pure $ flip (foldl singleMult) mopts
-        pickServers :: Int -> Cost -> Int -> [Server] -> [((Bool, Int), [Server])]
-        pickServers _ _ _ [] = []
-        pickServers servCnt cost unsafeLocationCnt (x:xs)
+        pickServers :: M.Map String Int -> Int -> Cost -> Int -> [Server] -> [((Bool, Int), [Server])]
+        pickServers _ _ _ _ [] = []
+        pickServers cc servCnt cost unsafeLocationCnt (x:xs)
           | maybe False (servCnt >=) n = []
-          | otherwise = bool [] (bool [((hasSafeLoc, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers servCnt cost unsafeLocationCnt xs ++ maybe (bool [] [((hasSafeLoc, finalLCnt), [x])] (isSuited && nextPicks /= [])) (const []) n
+          | otherwise = bool [] (bool [((hasSafeLoc, finalLCnt), [x])] (map (second (x:)) nextPicks) (nextPicks /= [])) isSuited ++ pickServers cc servCnt cost unsafeLocationCnt xs ++ maybe (bool [] [((hasSafeLoc, finalLCnt), [x])] (isSuited && nextPicks /= [])) (const []) n
                 where
                     isSafe = isSafeLocation (fromMaybe top mloc) $ servServerLocation x
                     newUnsafeLocationCnt = unsafeLocationCnt + bool 1 0 isSafe
                     newCost = cost `addCost` servCost x
                     newServCnt = servCnt + 1
-                    isSuited = maybe True (newUnsafeLocationCnt <) k && maybe True (not . flip exceedsLimit newCost) maxCost && (fromMaybe True delay || (not $ servDelayedFirstByte x)) && maybe True (servMinStorageDuration x <=) minDur
+                    isSuited = maybe True (newUnsafeLocationCnt <) k && maybe True (not . flip exceedsLimit newCost) maxCost && (fromMaybe True delay || (not $ servDelayedFirstByte x)) && maybe True (servMinStorageDuration x <=) minDur && maybe True (\cm -> maybe True (cm >=) (newCc M.!? (servCompany x))) compMax
                     finalLCnt = fromMaybe (newUnsafeLocationCnt + 1) k
                     hasSafeLoc = newServCnt > newUnsafeLocationCnt
+                    newCc = if M.member (servCompany x) cc
+                            then M.adjust (+1) (servCompany x) cc
+                            else M.insert (servCompany x) 1 cc
                     nextPicks :: [((Bool, Int), [Server])]
                     nextPicks = bool nextPicks' (map (first (first (const True))) nextPicks') isSafe
-                    nextPicks' = pickServers newServCnt newCost newUnsafeLocationCnt xs
+                    nextPicks' = pickServers newCc newServCnt newCost newUnsafeLocationCnt xs
 
         filtered :: [(Int, [Server])]
         filtered = map (first snd) (filter
                                     (\((b, _), s)
                                       -> let le = fromIntegral $ length s
                                          in b && maybe True (le>=) k && maybe True (le ==) n)
-                                    $ pickServers 0 noCost 0 servers')
+                                    $ pickServers M.empty 0 noCost 0 servers')
 
         configs :: [ServerConf]
         configs = map (uncurry $ flip generateServerConfig $ fromMaybe top mloc) filtered

@@ -29,6 +29,7 @@ library:
   - scientific
   - bytestring
   - deepseq
+  - containers
 
 executables:
   c3sp-exe:

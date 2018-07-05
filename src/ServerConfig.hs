@@ -50,6 +50,7 @@ data CostP = CostP
 data Server = Server
     { servId                 :: UID
     , servName               :: String
+    , servCompany            :: String
     , servServerLocation     :: Geolocation
     , servEncryptedStorage   :: String
     , servAvailability       :: Scientific

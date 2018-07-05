@@ -2,6 +2,7 @@
 	{
 		"id": 0,
 		"name": "Google - Multiregion EU",
+		"company": "Google",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -23,6 +24,7 @@
 	{
 		"id": 1,
 		"name": "Google - Multiregion US",
+		"company": "Google",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -44,6 +46,7 @@
 	{
 		"id": 2,
 		"name": "Google - Multiregion Asia",
+		"company": "Google",
 		"serverLocation": "Asia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -65,6 +68,7 @@
 	{
 		"id": 3,
 		"name": "Google - Regional Frankfurt",
+		"company": "Google",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -86,6 +90,7 @@
 	{
 		"id": 4,
 		"name": "Google - Regional London",
+		"company": "Google",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -107,6 +112,7 @@
 	{
 		"id": 5,
 		"name": "Google - Regional Belgium",
+		"company": "Google",
 		"serverLocation": "BE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -128,6 +134,7 @@
 	{
 		"id": 6,
 		"name": "Google - Regional Netherlands",
+		"company": "Google",
 		"serverLocation": "NL",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -149,6 +156,7 @@
 	{
 		"id": 7,
 		"name": "Google - Nearline Multiregion EU",
+		"company": "Google",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -170,6 +178,7 @@
 	{
 		"id": 8,
 		"name": "Google - Nearline Multiregion US",
+		"company": "Google",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -191,6 +200,7 @@
 	{
 		"id": 9,
 		"name": "Google - Nearline Multiregion Asia",
+		"company": "Google",
 		"serverLocation": "Asia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -212,6 +222,7 @@
 	{
 		"id": 10,
 		"name": "Google - Nearline Regional Frankfurt",
+		"company": "Google",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -233,6 +244,7 @@
 	{
 		"id": 11,
 		"name": "Google - Nearline Regional London",
+		"company": "Google",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -254,6 +266,7 @@
 	{
 		"id": 12,
 		"name": "Google - Nearline Regional Belgium",
+		"company": "Google",
 		"serverLocation": "BE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -275,6 +288,7 @@
 	{
 		"id": 13,
 		"name": "Google - Nearline Regional Netherlands",
+		"company": "Google",
 		"serverLocation": "NL",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -296,6 +310,7 @@
 	{
 		"id": 14,
 		"name": "Google - Coldline Multiregion EU",
+		"company": "Google",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -317,6 +332,7 @@
 	{
 		"id": 15,
 		"name": "Google - Coldline Multiregion US",
+		"company": "Google",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -338,6 +354,7 @@
 	{
 		"id": 16,
 		"name": "Google - Coldline Multiregion Asia",
+		"company": "Google",
 		"serverLocation": "Asia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -359,6 +376,7 @@
 	{
 		"id": 17,
 		"name": "Google - Coldline Multiregion Frankfurt",
+		"company": "Google",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -380,6 +398,7 @@
 	{
 		"id": 18,
 		"name": "Google - Coldline Multiregion London",
+		"company": "Google",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -401,6 +420,7 @@
 	{
 		"id": 19,
 		"name": "Google - Coldline Multiregion Belgium",
+		"company": "Google",
 		"serverLocation": "BE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -422,6 +442,7 @@
 	{
 		"id": 20,
 		"name": "Google - Coldline Multiregion Netherlands",
+		"company": "Google",
 		"serverLocation": "NL",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -443,6 +464,7 @@
 	{
 		"id": 21,
 		"name": "Amazon - N. Virginia",
+		"company": "Amazon",
 		"serverLocation": "Virginia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -464,6 +486,7 @@
 	{
 		"id": 22,
 		"name": "Amazon - Frankfurt",
+		"company": "Amazon",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -485,6 +508,7 @@
 	{
 		"id": 23,
 		"name": "Amazon - Ireland",
+		"company": "Amazon",
 		"serverLocation": "IE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -506,6 +530,7 @@
 	{
 		"id": 24,
 		"name": "Amazon - London",
+		"company": "Amazon",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -527,6 +552,7 @@
 	{
 		"id": 25,
 		"name": "Amazon - Seoul",
+		"company": "Amazon",
 		"serverLocation": "Seoul",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -548,6 +574,7 @@
 	{
 		"id": 26,
 		"name": "Amazon - IA N. Virginia",
+		"company": "Amazon",
 		"serverLocation": "Virginia",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -569,6 +596,7 @@
 	{
 		"id": 27,
 		"name": "Amazon - IA Frankfurt",
+		"company": "Amazon",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -590,6 +618,7 @@
 	{
 		"id": 28,
 		"name": "Amazon - IA Ireland",
+		"company": "Amazon",
 		"serverLocation": "IE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -611,6 +640,7 @@
 	{
 		"id": 29,
 		"name": "Amazon - IA London",
+		"company": "Amazon",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -632,6 +662,7 @@
 	{
 		"id": 30,
 		"name": "Amazon - IA Seoul",
+		"company": "Amazon",
 		"serverLocation": "Seoul",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -653,6 +684,7 @@
 	{
 		"id": 31,
 		"name": "Amazon - Glacier N. Virginia",
+		"company": "Amazon",
 		"serverLocation": "Virginia",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -674,6 +706,7 @@
 	{
 		"id": 32,
 		"name": "Amazon - Glacier Frankfurt",
+		"company": "Amazon",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -695,6 +728,7 @@
 	{
 		"id": 33,
 		"name": "Amazon - Glacier Ireland",
+		"company": "Amazon",
 		"serverLocation": "IE",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -716,6 +750,7 @@
 	{
 		"id": 34,
 		"name": "Amazon - Glacier London",
+		"company": "Amazon",
 		"serverLocation": "London",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -737,6 +772,7 @@
 	{
 		"id": 35,
 		"name": "Amazon - Glacier Seoul",
+		"company": "Amazon",
 		"serverLocation": "Seoul",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -758,6 +794,7 @@
 	{
 		"id": 36,
 		"name": "Microsoft Azure - East US 2",
+		"company": "Microsoft",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -779,6 +816,7 @@
 	{
 		"id": 37,
 		"name": "Microsoft Azure - Cool East US 2",
+		"company": "Microsoft",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -800,6 +838,7 @@
 	{
 		"id": 38,
 		"name": "Microsoft Azure - Archive East US 2",
+		"company": "Microsoft",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -821,6 +860,7 @@
 	{
 		"id": 39,
 		"name": "Microsoft Azure - West Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -842,6 +882,7 @@
 	{
 		"id": 40,
 		"name": "Microsoft Azure - Cool West Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -863,6 +904,7 @@
 	{
 		"id": 41,
 		"name": "Microsoft Azure - Archive West Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -884,6 +926,7 @@
 	{
 		"id": 42,
 		"name": "Microsoft Azure - North Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -905,6 +948,7 @@
 	{
 		"id": 43,
 		"name": "Microsoft Azure - Cool North Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -926,6 +970,7 @@
 	{
 		"id": 44,
 		"name": "Microsoft Azure - Archive North Europe",
+		"company": "Microsoft",
 		"serverLocation": "EU",
 		"encryptedStorage": "AES-256",
 		"availability": 0,
@@ -947,6 +992,7 @@
 	{
 		"id": 45,
 		"name": "Microsoft Azure - Germany Central",
+		"company": "Microsoft",
 		"serverLocation": "DE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.999,
@@ -968,6 +1014,7 @@
 	{
 		"id": 46,
 		"name": "Microsoft Azure - Cool Germany Central",
+		"company": "Microsoft",
 		"serverLocation": "DE",
 		"encryptedStorage": "AES-256",
 		"availability": 0.99,
@@ -989,6 +1036,7 @@
 	{
 		"id": 47,
 		"name": "IBM Cloud - Regional Toronto",
+		"company": "IBM",
 		"serverLocation": "Toronto",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1010,6 +1058,7 @@
 	{
 		"id": 48,
 		"name": "IBM Cloud - Regional US East",
+		"company": "IBM",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1031,6 +1080,7 @@
 	{
 		"id": 49,
 		"name": "IBM Cloud - Regional Melbourne",
+		"company": "IBM",
 		"serverLocation": "Melbourne",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1052,6 +1102,7 @@
 	{
 		"id": 50,
 		"name": "IBM Cloud - Regional Frankfurt",
+		"company": "IBM",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1073,6 +1124,7 @@
 	{
 		"id": 51,
 		"name": "IBM Cloud - Regional Great Britain",
+		"company": "IBM",
 		"serverLocation": "GB",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1094,6 +1146,7 @@
 	{
 		"id": 52,
 		"name": "IBM Cloud - Regional Vault Toronto",
+		"company": "IBM",
 		"serverLocation": "Toronto",
 		"encryptedStorage": "AES-256",
 		"availability": 0.995,
@@ -1115,6 +1168,7 @@
 	{
 		"id": 53,
 		"name": "IBM Cloud - Regional Vault US East",
+		"company": "IBM",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.995,
@@ -1136,6 +1190,7 @@
 	{
 		"id": 54,
 		"name": "IBM Cloud - Regional Vault Melbourne",
+		"company": "IBM",
 		"serverLocation": "Melbourne",
 		"encryptedStorage": "AES-256",
 		"availability": 0.995,
@@ -1157,6 +1212,7 @@
 	{
 		"id": 55,
 		"name": "IBM Cloud - Regional Vault Frankfurt",
+		"company": "IBM",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.995,
@@ -1178,6 +1234,7 @@
 	{
 		"id": 56,
 		"name": "IBM Cloud - Regional Vault Great Britain",
+		"company": "IBM",
 		"serverLocation": "GB",
 		"encryptedStorage": "AES-256",
 		"availability": 0.995,
@@ -1199,6 +1256,7 @@
 	{
 		"id": 57,
 		"name": "IBM Cloud - Regional Cold Vault Toronto",
+		"company": "IBM",
 		"serverLocation": "Toronto",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1220,6 +1278,7 @@
 	{
 		"id": 58,
 		"name": "IBM Cloud - Regional Cold Vault US East",
+		"company": "IBM",
 		"serverLocation": "US",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1241,6 +1300,7 @@
 	{
 		"id": 59,
 		"name": "IBM Cloud - Regional Cold Vault Melbourne",
+		"company": "IBM",
 		"serverLocation": "Melbourne",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1262,6 +1322,7 @@
 	{
 		"id": 60,
 		"name": "IBM Cloud - Regional Cold Vault Frankfurt",
+		"company": "IBM",
 		"serverLocation": "Frankfurt",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1283,6 +1344,7 @@
 	{
 		"id": 61,
 		"name": "IBM Cloud - Regional Cold Vault Great Britain",
+		"company": "IBM",
 		"serverLocation": "GB",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
@@ -1304,6 +1366,7 @@
 	{
 		"id": 62,
 		"name": "Oracle Cloud - Object Storage",
+		"company": "Oracle",
 		"serverLocation": "World",
 		"encryptedStorage": "AES-256",
 		"availability": 0.9995,
