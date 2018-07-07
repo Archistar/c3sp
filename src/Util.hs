@@ -1,4 +1,4 @@
-module Util(safeRem, noOrdEq, toEither, head', dropPrefix, maybeDo, find', atLeast) where
+module Util(safeRem, noOrdEq, toEither, head', dropPrefix, maybeAdjust, find', atLeast) where
 
 import Control.Arrow
 import Data.Char
@@ -40,9 +40,9 @@ find' f (x:xs) = if f x
 dropPrefix :: Int -> String -> String
 dropPrefix pl = uncurry (:) . first toLower . head' . drop pl
 
-maybeDo :: a -> Maybe (a -> a) -> a
-maybeDo a Nothing  = a
-maybeDo a (Just f) = f a
+maybeAdjust :: Maybe (a -> a) -> a -> a
+maybeAdjust Nothing  x = x
+maybeAdjust (Just f) x = f x
 
 -- Calculates probability that at lest n of the given probabilities are true at the same time.
 atLeast :: (Eq a, Ord a, Num a, Num b) => a -> [b] -> b

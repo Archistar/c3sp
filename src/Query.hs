@@ -28,8 +28,13 @@ data QueryOptions = QueryOptions
     } deriving (Show, Eq)
 
 data Query = Query
-    { qK             :: Maybe Int
+    { qLK            :: Maybe Int
+    , qUK            :: Maybe Int
+    , qK             :: Maybe Int
+    , qLN            :: Maybe Int
+    , qUN            :: Maybe Int
     , qN             :: Maybe Int
+    , qLimit         :: Maybe Int
     , qLoc           :: Maybe Geolocation
     , qAvail         :: Maybe Scientific
     , qCost          :: Maybe CostP
