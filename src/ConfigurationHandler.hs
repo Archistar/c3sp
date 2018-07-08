@@ -187,8 +187,8 @@ updateCompCnt comp cnt = if M.member comp cnt
 
 availCompare c2 c1 =
   let sc = costPerGBStorage . scCostPerMonth
-  in case compare (sc c1) (sc c2) of
-       EQ -> flip compare (scAvailability c1) (scAvailability c2)
+  in case flip compare (scAvailability c1) (scAvailability c2) of
+       EQ -> compare (sc c1) (sc c2)
        x  -> x
 
 gbStorageCompare c2 c1 =
