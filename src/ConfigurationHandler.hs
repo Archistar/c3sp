@@ -99,7 +99,7 @@ buildConfigs servers (Query lK uK k lN uN n limit mLoc avail cost delay dur mOrd
           noPickJob'   = lift' hasNoPickJob noPickJob
 
           -- Job for using current pick
-          hasPickJob = not endCurrentJob
+          hasPickJob = not endCurrentJob && isSuitable
           pickJob    = BuildJob al' picks' pool'
           pickJob'   = lift' hasPickJob pickJob
 
