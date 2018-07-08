@@ -1,1 +1,1 @@
-{"minDur": 30, "delay": false, "avail": 0.99999, "k":3, "loc":"EU", "cost": {"costPerGBStorage":0.0525}, "order":"ByAvail"}
+{"uN": 14, "limit": 10, "minDur": 30, "delay": false, "avail": 0.99999, "k":3, "loc":"EU", "cost": {"costPerGBStorage":0.0525}, "order":"ByAvail"}
