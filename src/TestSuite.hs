@@ -10,11 +10,12 @@ import Data.Aeson
 import qualified Data.ByteString.Lazy.Char8 as Ch8
 import Data.Maybe (fromMaybe)
 import Data.Scientific
+import Control.Arrow
 
 import Util
 import Geolocation
 import ConfigurationHandler (findConfigs)
-import ServerConfig (ServerConf)
+import ServerConfig
 
 data Test = Test {testName :: String, test :: IO Bool}
 data ModuleTest = ModuleTest {moduleName :: String, tests :: [Test]}
@@ -29,10 +30,12 @@ readTestFile :: FilePath -> IO Ch8.ByteString
 readTestFile = Ch8.readFile . (baseTestDir ++)
 
 testAgainstFile :: Ch8.ByteString -> FilePath -> IO Bool
-testAgainstFile testResult = fmap (noOrdEq testJson . ergJson) . readTestFile
+testAgainstFile testResult = fmap ((==) testJson . ergJson) . readTestFile
     where
-        testJson = either (error . ("Invalid test json:" ++)) id $ eitherDecode testResult :: [Value]
-        ergJson ergStr = either (error . ("Invalid json in test file:" ++)) id $ eitherDecode ergStr :: [Value]
+        comp1 = map (costPerGBStorage . scCostPerMonth)
+        comp2 = map scAvailability
+        testJson = either (error . ("Invalid test json:" ++)) (comp1&&&comp2) $ (eitherDecode testResult :: Either String [ServerConf])
+        ergJson ergStr = either (error . ("Invalid json in test file:" ++)) (comp1&&&comp2) $ (eitherDecode ergStr :: Either String [ServerConf])
 
 -- checks if given value contains an exception
 throwsException :: NFData a => a -> IO Bool
