@@ -1,4 +1,4 @@
-module Cli where
+module Cli(cli) where
 
 import CmdParser (Task(..), parse)
 import System.Environment (getArgs)
@@ -9,14 +9,21 @@ import Data.Aeson
 import System.Exit (die)
 import qualified Data.ByteString.Lazy.Char8 as Ch8
 
-performTask :: Task -> IO ()
-performTask (FindConfigs path) = findConfigs path >>= either die (Ch8.putStrLn . encode)
-performTask StdinFindConfigs = stdinFindConfigs >>= either die (Ch8.putStrLn . encode)
-performTask ShowHelp = putStrLn helpText
-performTask RunTests = runAllTests >>= putStrLn
-performTask RunDemo = performTask $ FindConfigs "demo.json"
-performTask ValidateQuery = stdinValidateQuery >>= maybe (putStrLn "Valid Query.") (die . ("Invalid Query: " ++))
+printJSON :: (ToJSON a) => a -> IO ()
+printJSON = Ch8.putStrLn . encode
 
+performTask :: Task -> IO ()
+performTask (FindConfigs path) = findConfigs path >>= either die printJSON
+performTask StdinFindConfigs   = stdinFindConfigs >>= either die printJSON
+performTask ShowHelp           = putStrLn helpText
+performTask RunTests           = runAllTests >>= putStrLn
+performTask RunDemo            = performTask $ FindConfigs "demo.json"
+performTask ValidateQuery      =
+  let printOK = putStrLn "Valid Query."
+      exitErr = die . ("Invalid Query : " ++)
+  in stdinValidateQuery >>= maybe printOK exitErr
+
+-- Perform command specified by command line
 cli :: IO ()
 cli =
   let printHelp = putStrLn "Wrong usage. Use --help for help."
