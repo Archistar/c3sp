@@ -75,6 +75,8 @@ instance Lattice Geolocation where
     NL <: EU = True
     BE <: EU = True
     IE <: EU = True
+    London <: EU = True
+    Frankfurt <: EU = True
     _ <: EU = False
 
     Asia <: Asia = True
